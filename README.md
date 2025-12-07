@@ -45,9 +45,10 @@ This application is run as a Python module. Below are the primary commands.
 1. **List all players**
     Displays a formatted table of all players with their projected fantasy points.
 
-    ```bash
+```bash
     python -m src.main list
-    ```
+```
+    Example outut:
 ```bash
     --- Fantasy Football CLI ---
     Listing players: All Players
@@ -58,9 +59,10 @@ This application is run as a Python module. Below are the primary commands.
 ┡━━━━━━━━━━━━━━━━━━━━━╇━━━━━╇━━━━━━╇━━━━━━━━━━━━━┩
 │ Christian McCaffrey │ RB  │ SF   │       395.3 │
 │ Josh Allen          │ QB  │ BUF  │      394.64 │
-│ And so on...                                   │
+│ And so on...                                   |
 ```
-    Optional filters:
+
+Optional filters:
 ```bash
     python -m src.main list --position WR
     python -m src.main list --team KC
@@ -83,11 +85,11 @@ This application is run as a Python module. Below are the primary commands.
 ```bash
     python -m src.main score "Josh Allen"
 ```
-    Supports custom PPR:
+Supports custom PPR:
 ```bash
     python -m src.main score "Josh Allen" --ppr 0.5
 ```
-    Example output:
+Example output:
 ```bash
 ----- Fantasy Football CLI -----
 ----- Josh Allen (BUF, QB) -----
