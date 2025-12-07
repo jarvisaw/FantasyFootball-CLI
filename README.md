@@ -48,7 +48,7 @@ This application is run as a Python module. Below are the primary commands.
 ```bash
     python -m src.main list
 ```
-    Example outut:
+Example outut:
 ```bash
     --- Fantasy Football CLI ---
     Listing players: All Players
