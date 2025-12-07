@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Patrick Mahomes",
+    "position": "QB",
+    "team": "KC",
+    "bye_week": 10,
+    "projected_points": 24.5
+  },
+  {
+    "id": 2,
+    "name": "Christian McCaffrey",
+    "position": "RB",
+    "team": "SF",
+    "bye_week": 9,
+    "projected_points": 22.1
+  },
+  {
+    "id": 3,
+    "name": "Tyreek Hill",
+    "position": "WR",
+    "team": "MIA",
+    "bye_week": 10,
+    "projected_points": 19.8
+  },
+  {
+    "id": 4,
+    "name": "Travis Kelce",
+    "position": "TE",
+    "team": "KC",
+    "bye_week": 10,
+    "projected_points": 15.5
+  },
+  {
+    "id": 5,
+    "name": "Justin Jefferson",
+    "position": "WR",
+    "team": "MIN",
+    "bye_week": 13,
+    "projected_points": 20.2
+  }
+]
