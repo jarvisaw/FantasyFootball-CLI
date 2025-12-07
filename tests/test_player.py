@@ -1,27 +1,54 @@
-# tests/test_player.py
 import pytest
 from src.player import Player
-from src.utils import load_players
 
-def test_player_creation():
-    """Test that a Player object is created with correct attributes."""
-    p = Player(1, "Test Player", "QB", "TST", 10, 20.5)
-    
-    assert p.name == "Test Player"
+
+def test_player_initialization():
+    p = Player(
+        id=1,
+        name="Test Player",
+        position="qb",
+        team="KC",
+        stats={"passing_yards": 300}
+    )
     assert p.position == "QB"
-    assert p.projected_points == 20.5
+    assert p.name == "Test Player"
 
-def test_player_string_representation():
-    """Test the __str__ method for nice printing."""
-    p = Player(1, "Joe Burrow", "QB", "CIN", 10, 22.0)
-    expected_str = "Joe Burrow (QB - CIN) | Proj: 22.0"
-    
-    assert str(p) == expected_str
 
-def test_load_players_file_not_found():
-    """Test that loading a non-existent file returns an empty list (no crash)."""
-    result = load_players("data/fake_file.json")
-    
-    # It should return an empty list, not crash with an error
-    assert result == []
-    assert len(result) == 0
+def test_standard_scoring_qb():
+    p = Player(
+        id=1,
+        name="QB Test",
+        position="QB",
+        team="KC",
+        stats={
+            "passing_yards": 300,   # 300 * 0.04 = 12
+            "passing_tds": 2,       # 2 * 4 = 8
+            "interceptions": 1      # -2
+        }
+    )
+    assert p.calculate_fantasy_points() == pytest.approx(18.0)
+
+
+def test_ppr_scoring():
+    p = Player(
+        id=2,
+        name="WR Test",
+        position="WR",
+        team="DAL",
+        stats={
+            "receiving_yards": 100,  # 10 pts
+            "receptions": 5          # 5 * 1.0 = 5 pts
+        }
+    )
+    assert p.calculate_fantasy_points(ppr=1.0) == pytest.approx(15.0)
+
+
+def test_missing_stats_defaults_to_zero():
+    p = Player(
+        id=3,
+        name="No Stats",
+        position="RB",
+        team="SF",
+        stats={}
+    )
+    assert p.calculate_fantasy_points() == 0.0

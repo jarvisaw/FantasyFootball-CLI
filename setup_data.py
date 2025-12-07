@@ -1,0 +1,138 @@
+import json
+import os
+
+# Ensure data directory exists
+os.makedirs("data", exist_ok=True)
+
+players = [
+    {
+        "id": 1,
+        "name": "Patrick Mahomes",
+        "position": "QB",
+        "team": "KC",
+        "stats": {
+            "passing_yards": 4183.0,
+            "passing_tds": 27,
+            "interceptions": 14,
+            "rushing_yards": 389.0,
+            "rushing_tds": 0
+        }
+    },
+    {
+        "id": 2,
+        "name": "Christian McCaffrey",
+        "position": "RB",
+        "team": "SF",
+        "stats": {
+            "rushing_yards": 1459.0,
+            "rushing_tds": 14,
+            "receiving_yards": 564.0,
+            "receiving_tds": 7,
+            "receptions": 67
+        }
+    },
+    {
+        "id": 3,
+        "name": "Tyreek Hill",
+        "position": "WR",
+        "team": "MIA",
+        "stats": {
+            "receiving_yards": 1799.0,
+            "receiving_tds": 13,
+            "receptions": 119,
+            "rushing_yards": 15.0
+        }
+    },
+    {
+        "id": 4,
+        "name": "Josh Allen",
+        "position": "QB",
+        "team": "BUF",
+        "stats": {
+            "passing_yards": 4306.0,
+            "passing_tds": 29,
+            "interceptions": 18,
+            "rushing_yards": 524.0,
+            "rushing_tds": 15
+        }
+    },
+    {
+        "id": 5,
+        "name": "CeeDee Lamb",
+        "position": "WR",
+        "team": "DAL",
+        "stats": {
+            "receiving_yards": 1749.0,
+            "receiving_tds": 12,
+            "receptions": 135,
+            "rushing_yards": 113.0,
+            "rushing_tds": 2
+        }
+    },
+    {
+        "id": 6,
+        "name": "Lamar Jackson",
+        "position": "QB",
+        "team": "BAL",
+        "stats": {
+            "passing_yards": 3678.0,
+            "passing_tds": 24,
+            "interceptions": 7,
+            "rushing_yards": 821.0,
+            "rushing_tds": 5
+        }
+    },
+    {
+        "id": 7,
+        "name": "Kyren Williams",
+        "position": "RB",
+        "team": "LAR",
+        "stats": {
+            "rushing_yards": 1144.0,
+            "rushing_tds": 12,
+            "receiving_yards": 206.0,
+            "receiving_tds": 3,
+            "receptions": 32
+        }
+    },
+    {
+        "id": 8,
+        "name": "Amon-Ra St. Brown",
+        "position": "WR",
+        "team": "DET",
+        "stats": {
+            "receiving_yards": 1515.0,
+            "receiving_tds": 10,
+            "receptions": 119
+        }
+    },
+    {
+        "id": 9,
+        "name": "Travis Kelce",
+        "position": "TE",
+        "team": "KC",
+        "stats": {
+            "receiving_yards": 984.0,
+            "receiving_tds": 5,
+            "receptions": 93
+        }
+    },
+    {
+        "id": 10,
+        "name": "Derrick Henry",
+        "position": "RB",
+        "team": "BAL",
+        "stats": {
+            "rushing_yards": 1167.0,
+            "rushing_tds": 12,
+            "receiving_yards": 214.0,
+            "receptions": 28
+        }
+    }
+]
+
+# Write JSON file
+with open("data/players.json", "w") as f:
+    json.dump(players, f, indent=2)
+
+print("Successfully created data/players.json with 10 players!")

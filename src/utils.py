@@ -1,38 +1,32 @@
-# src/utils.py
 import json
-import os
+from typing import List
 from src.player import Player
 
-def load_players(file_path):
+def load_players(file_path: str) -> List[Player]:
     """
-    Loads player data from a JSON file and returns a list of Player objects.
+    Reads a JSON file and converts it into a list of Player objects.
     """
-    if not os.path.exists(file_path):
-        print(f"Error: The file '{file_path}' was not found.")
-        return []
-
     try:
-        with open(file_path, 'r') as file:
-            data = json.load(file)
+        with open(file_path, 'r') as f:
+            data = json.load(f)
             
-            players = []
-            for item in data:
-                # Create a Player object for each dictionary in the JSON
-                player = Player(
-                    item['id'],
-                    item['name'],
-                    item['position'],
-                    item['team'],
-                    item['bye_week'],
-                    item['projected_points']
-                )
-                players.append(player)
+        players = []
+        for entry in data:
+            # We explicitly map the JSON fields to the Player class
+            player = Player(
+                id=entry['id'],
+                name=entry['name'],
+                position=entry['position'],
+                team=entry['team'],
+                stats=entry.get('stats', {})
+            )
+            players.append(player)
             
-            return players
-            
+        return players
+    
+    except FileNotFoundError:
+        # In a real app, you might want to log this or raise a custom error
+        raise
     except json.JSONDecodeError:
-        print(f"Error: The file '{file_path}' contains invalid JSON.")
-        return []
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
+        print(f"Error: {file_path} contains invalid JSON.")
         return []

@@ -4,39 +4,307 @@
     "name": "Patrick Mahomes",
     "position": "QB",
     "team": "KC",
-    "bye_week": 10,
-    "projected_points": 24.5
+    "stats": {
+      "passing_yards": 4890,
+      "passing_tds": 37,
+      "interceptions": 12,
+      "rushing_yards": 327,
+      "rushing_tds": 2
+    }
   },
   {
     "id": 2,
-    "name": "Christian McCaffrey",
-    "position": "RB",
-    "team": "SF",
-    "bye_week": 9,
-    "projected_points": 22.1
+    "name": "Josh Allen",
+    "position": "QB",
+    "team": "BUF",
+    "stats": {
+      "passing_yards": 4306,
+      "passing_tds": 29,
+      "interceptions": 18,
+      "rushing_yards": 524,
+      "rushing_tds": 15
+    }
   },
   {
     "id": 3,
-    "name": "Tyreek Hill",
-    "position": "WR",
-    "team": "MIA",
-    "bye_week": 10,
-    "projected_points": 19.8
+    "name": "Joe Burrow",
+    "position": "QB",
+    "team": "CIN",
+    "stats": {
+      "passing_yards": 4475,
+      "passing_tds": 34,
+      "interceptions": 10,
+      "rushing_yards": 242,
+      "rushing_tds": 3
+    }
   },
   {
     "id": 4,
-    "name": "Travis Kelce",
-    "position": "TE",
-    "team": "KC",
-    "bye_week": 10,
-    "projected_points": 15.5
+    "name": "Justin Herbert",
+    "position": "QB",
+    "team": "LAC",
+    "stats": {
+      "passing_yards": 4770,
+      "passing_tds": 31,
+      "interceptions": 11,
+      "rushing_yards": 302,
+      "rushing_tds": 3
+    }
   },
   {
     "id": 5,
+    "name": "Lamar Jackson",
+    "position": "QB",
+    "team": "BAL",
+    "stats": {
+      "passing_yards": 3650,
+      "passing_tds": 24,
+      "interceptions": 8,
+      "rushing_yards": 903,
+      "rushing_tds": 7
+    }
+  },
+  {
+    "id": 6,
+    "name": "Jalen Hurts",
+    "position": "QB",
+    "team": "PHI",
+    "stats": {
+      "passing_yards": 3850,
+      "passing_tds": 23,
+      "interceptions": 10,
+      "rushing_yards": 760,
+      "rushing_tds": 10
+    }
+  },
+  {
+    "id": 7,
+    "name": "Dak Prescott",
+    "position": "QB",
+    "team": "DAL",
+    "stats": {
+      "passing_yards": 4520,
+      "passing_tds": 36,
+      "interceptions": 9,
+      "rushing_yards": 210,
+      "rushing_tds": 2
+    }
+  },
+  {
+    "id": 8,
+    "name": "Tua Tagovailoa",
+    "position": "QB",
+    "team": "MIA",
+    "stats": {
+      "passing_yards": 4620,
+      "passing_tds": 30,
+      "interceptions": 12,
+      "rushing_yards": 85,
+      "rushing_tds": 0
+    }
+  },
+  {
+    "id": 9,
+    "name": "Kirk Cousins",
+    "position": "QB",
+    "team": "MIN",
+    "stats": {
+      "passing_yards": 4290,
+      "passing_tds": 29,
+      "interceptions": 10,
+      "rushing_yards": 75,
+      "rushing_tds": 1
+    }
+  },
+  {
+    "id": 10,
+    "name": "Trevor Lawrence",
+    "position": "QB",
+    "team": "JAX",
+    "stats": {
+      "passing_yards": 4210,
+      "passing_tds": 27,
+      "interceptions": 11,
+      "rushing_yards": 310,
+      "rushing_tds": 3
+    }
+  },
+
+  {
+    "id": 11,
+    "name": "Christian McCaffrey",
+    "position": "RB",
+    "team": "SF",
+    "stats": {
+      "rushing_yards": 1459,
+      "rushing_tds": 14,
+      "receiving_yards": 564,
+      "receiving_tds": 7,
+      "receptions": 67
+    }
+  },
+  {
+    "id": 12,
+    "name": "Derrick Henry",
+    "position": "RB",
+    "team": "TEN",
+    "stats": {
+      "rushing_yards": 1320,
+      "rushing_tds": 12,
+      "receiving_yards": 215,
+      "receiving_tds": 1,
+      "receptions": 22
+    }
+  },
+  {
+    "id": 13,
+    "name": "Nick Chubb",
+    "position": "RB",
+    "team": "CLE",
+    "stats": {
+      "rushing_yards": 1525,
+      "rushing_tds": 13,
+      "receiving_yards": 210,
+      "receiving_tds": 1,
+      "receptions": 25
+    }
+  },
+  {
+    "id": 14,
+    "name": "Saquon Barkley",
+    "position": "RB",
+    "team": "NYG",
+    "stats": {
+      "rushing_yards": 1210,
+      "rushing_tds": 10,
+      "receiving_yards": 338,
+      "receiving_tds": 2,
+      "receptions": 48
+    }
+  },
+  {
+    "id": 15,
+    "name": "Bijan Robinson",
+    "position": "RB",
+    "team": "ATL",
+    "stats": {
+      "rushing_yards": 1120,
+      "rushing_tds": 8,
+      "receiving_yards": 455,
+      "receiving_tds": 3,
+      "receptions": 58
+    }
+  },
+
+  {
+    "id": 16,
     "name": "Justin Jefferson",
     "position": "WR",
     "team": "MIN",
-    "bye_week": 13,
-    "projected_points": 20.2
+    "stats": {
+      "receiving_yards": 1809,
+      "receiving_tds": 10,
+      "receptions": 128
+    }
+  },
+  {
+    "id": 17,
+    "name": "Tyreek Hill",
+    "position": "WR",
+    "team": "MIA",
+    "stats": {
+      "receiving_yards": 1798,
+      "receiving_tds": 13,
+      "receptions": 119
+    }
+  },
+  {
+    "id": 18,
+    "name": "Amon-Ra St. Brown",
+    "position": "WR",
+    "team": "DET",
+    "stats": {
+      "receiving_yards": 1515,
+      "receiving_tds": 10,
+      "receptions": 112
+    }
+  },
+  {
+    "id": 19,
+    "name": "CeeDee Lamb",
+    "position": "WR",
+    "team": "DAL",
+    "stats": {
+      "receiving_yards": 1749,
+      "receiving_tds": 12,
+      "receptions": 135
+    }
+  },
+  {
+    "id": 20,
+    "name": "Stefon Diggs",
+    "position": "WR",
+    "team": "BUF",
+    "stats": {
+      "receiving_yards": 1183,
+      "receiving_tds": 8,
+      "receptions": 107
+    }
+  },
+
+  {
+    "id": 21,
+    "name": "Travis Kelce",
+    "position": "TE",
+    "team": "KC",
+    "stats": {
+      "receiving_yards": 1214,
+      "receiving_tds": 9,
+      "receptions": 98
+    }
+  },
+  {
+    "id": 22,
+    "name": "George Kittle",
+    "position": "TE",
+    "team": "SF",
+    "stats": {
+      "receiving_yards": 1020,
+      "receiving_tds": 6,
+      "receptions": 71
+    }
+  },
+  {
+    "id": 23,
+    "name": "Mark Andrews",
+    "position": "TE",
+    "team": "BAL",
+    "stats": {
+      "receiving_yards": 915,
+      "receiving_tds": 8,
+      "receptions": 73
+    }
+  },
+  {
+    "id": 24,
+    "name": "Sam LaPorta",
+    "position": "TE",
+    "team": "DET",
+    "stats": {
+      "receiving_yards": 889,
+      "receiving_tds": 6,
+      "receptions": 86
+    }
+  },
+  {
+    "id": 25,
+    "name": "Dallas Goedert",
+    "position": "TE",
+    "team": "PHI",
+    "stats": {
+      "receiving_yards": 702,
+      "receiving_tds": 4,
+      "receptions": 65
+    }
   }
 ]
