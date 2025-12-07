@@ -40,7 +40,7 @@ A professional command-line interface (CLI) tool for managing fantasy football p
 ---
 
 ## Usage
-    This application is run as a Python module. Below are the primary commands.
+This application is run as a Python module. Below are the primary commands.
 
 1. **List all players**
     Displays a formatted table of all players with their projected fantasy points.
@@ -83,7 +83,7 @@ A professional command-line interface (CLI) tool for managing fantasy football p
 ```bash
     python -m src.main score "Josh Allen"
 ```
-    Supports customer PPR:
+    Supports custom PPR:
 ```bash
     python -m src.main score "Josh Allen" --ppr 0.5
 ```
