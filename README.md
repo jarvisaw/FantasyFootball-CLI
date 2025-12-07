@@ -22,19 +22,24 @@ A professional command-line interface (CLI) tool for managing fantasy football p
    cd FantasyFootball-CLI
 ```
 2. **Create a virtual environment**
-    * *On Windows:*
+    * *On Windows (Git Bash):*
     ```bash
-        python -m venv venv
-        .\venv\Scripts\activate
+    python -m venv venv
+    source venv/Scripts/activate
+    ```
+    * *On Windows (PowerShell):*
+    ```bash
+    python -m venv venv
+    .\venv\Scripts\activate
     ```
     * *On macOS/Linux:*
     ```bash
-        python3 -m venv venv
-        source venv/bin/activate
+    python3 -m venv venv
+    source venv/bin/activate
     ```
 3. **Install dependencies**
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ---
@@ -46,7 +51,7 @@ This application is run as a Python module. Below are the primary commands.
     Displays a formatted table of all players with their projected fantasy points.
 
 ```bash
-    python -m src.main list
+python -m src.main list
 ```
 Example outut:
 ```bash
@@ -64,16 +69,16 @@ Example outut:
 
 Optional filters:
 ```bash
-    python -m src.main list --position WR
-    python -m src.main list --team KC
-    python -m src.main list --top 10
-    python -m src.main list --ppr 0.5
+python -m src.main list --position WR
+python -m src.main list --team KC
+python -m src.main list --top 10
+python -m src.main list --ppr 0.5
 ```
 
 2. **Search for a player**
     Search for a specific player by name (case-insensitive)
 ```bash
-    python -m src.main search "Mahomes"
+python -m src.main search "Mahomes"
 ```
 ```bash
     Found 1 matches for 'Mahomes':
@@ -83,11 +88,11 @@ Optional filters:
 3. **View detailed scoring breakdown**
     Shows a full fantasy scoring breakdown for a single player:
 ```bash
-    python -m src.main score "Josh Allen"
+python -m src.main score "Josh Allen"
 ```
 Supports custom PPR:
 ```bash
-    python -m src.main score "Josh Allen" --ppr 0.5
+python -m src.main score "Josh Allen" --ppr 0.5
 ```
 Example output:
 ```bash
